@@ -37,14 +37,21 @@ namespace NetworkAdapterOptions
         }
         public static void Ethernet1stAdapter()
         {
-          
+            Process Eth1 = new Process();
+            Eth1.StartInfo.FileName = "netsh.exe";
+            Eth1.StartInfo.Arguments = "interface ip set address \"Ethernet\" static 192.168.100.100 255.255.255.0 192.168.0.1";
+            Eth1.StartInfo.UseShellExecute = false;
+            Eth1.StartInfo.RedirectStandardOutput = true;
+            Eth1.Start();
         }
 
         public static void EthernetDHCP()
         {
             Process dhcp = new Process();
-            ProcessStartInfo psi = new ProcessStartInfo("netsh", "interface ip set address \"Local Area Connection\" static 192.168.0.10 255.255.255.0 192.168.0.1 1");
-            dhcp.StartInfo = psi;
+            dhcp.StartInfo.FileName = "netsh.exe";
+            dhcp.StartInfo.Arguments = "interface ip set address \"Local Area Connection\" static 192.168.0.10 255.255.255.0 192.168.0.1 1";
+            dhcp.StartInfo.UseShellExecute = false;
+            dhcp.StartInfo.RedirectStandardOutput = true;            
             dhcp.Start();
         }
 

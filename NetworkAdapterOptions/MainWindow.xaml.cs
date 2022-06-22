@@ -5,6 +5,7 @@ using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace NetworkAdapterOptions
 {
@@ -52,13 +53,15 @@ namespace NetworkAdapterOptions
                 MessageBoxResult result;
                 result = MessageBox.Show(messageBoxTxt, caption, button, icon);
             }
+
+            SetupIPs.Ethernet1stAdapter();
         }
              
 
         private void EthDHCP_Click(object sender, RoutedEventArgs e)
         {
-            string DHCPSetup= "";
-            SetupIPs.SetupCustomIP(DHCPSetup);
+            SetupIPs.EthernetDHCP();
+            EthDHCPBut.Background = new SolidColorBrush(Color.FromRgb(0, 255, 255));
         }
       
     }

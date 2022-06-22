@@ -7,15 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="218" Width="359">
     <Grid Background="Black" Margin="0,0,10,12">
-        <Button x:Name="StaticEth1" Content="Static IP Eth 1st" HorizontalAlignment="Left" Margin="27,65,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="StaticEth1_Click"/>
-        <Button x:Name="StaticWifi" Content="Static Wi-Fi" HorizontalAlignment="Left" Margin="27,121,0,0" VerticalAlignment="Top" Height="30" Width="90"/>
-        <Button x:Name="StaticEth2" Content="Static IP Eth 2st" HorizontalAlignment="Left" Margin="138,65,0,0" VerticalAlignment="Top" Height="30" Width="88"/>
-        <Button x:Name="WifiDHCP" Content="Wi-fi DHCP" HorizontalAlignment="Left" Margin="138,121,0,0" VerticalAlignment="Top" Height="30" Width="88"/>
-        <Button x:Name="EthDHCP" Content="Eth DHCP" HorizontalAlignment="Left" Margin="243,65,0,0" VerticalAlignment="Top" Height="30" Width="83"/>
+        <Button x:Name="StaticEth1But" Content="Static IP Eth 1st" HorizontalAlignment="Left" Margin="27,65,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="StaticEth1_Click"/>
+        <Button x:Name="StaticWifiBut" Content="Static Wi-Fi" HorizontalAlignment="Left" Margin="27,121,0,0" VerticalAlignment="Top" Height="30" Width="90"/>
+        <Button x:Name="StaticEth2But" Content="Static IP Eth 2st" HorizontalAlignment="Left" Margin="138,65,0,0" VerticalAlignment="Top" Height="30" Width="88"/>
+        <Button x:Name="WifiDHCPBut" Content="Wi-fi DHCP" HorizontalAlignment="Left" Margin="138,121,0,0" VerticalAlignment="Top" Height="30" Width="88"/>
+        <Button x:Name="EthDHCPBut" Content="Eth DHCP" HorizontalAlignment="Left" Margin="243,65,0,0" VerticalAlignment="Top" Height="30" Width="83" Click="EthDHCP_Click"/>
         <Label Content="Static IP" HorizontalAlignment="Left" Margin="242,3,0,0" VerticalAlignment="Top" Width="52" Background="Black" Foreground="White"/>
         <TextBox x:Name="IPAddrTxt" HorizontalAlignment="Left" Margin="211,27,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Height="20"/>
-        <ComboBox x:Name="NIComboBox" Margin="27,29,201,143" SelectionChanged="NIComboBox_SelectionChanged"/>
-        <Label Content="Network Interfaces" HorizontalAlignment="Left" Margin="32,3,0,0" VerticalAlignment="Top" Width="111" Height="26" Background="Black" Foreground="White"/>
 
     </Grid>
 </Window>
